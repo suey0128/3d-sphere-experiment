@@ -15,3 +15,5 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
+
+# tourial https://www.youtube.com/watch?v=pUgWfqWZWmM&t=1470s
