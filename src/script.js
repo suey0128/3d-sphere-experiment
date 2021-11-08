@@ -8,7 +8,7 @@ const textureLoader = new THREE.TextureLoader()
 const normalTexture = textureLoader.load('./texture/NormalMap.png')
 
 // Debug - the controls on top right of the screen
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -63,7 +63,7 @@ scene.add(pointLight2)
 // 1) create the light
 const pointLight3 = new THREE.PointLight(0xa4ff, 0.1)
 // 2) set all the artribute of the light
-pointLight3.position.set(-0.48,-0.35,0.24)
+pointLight3.position.set(0.48,-0.35,0.24)
 pointLight3.intensity = 5.18
 // 3) add the light to the Scene
 scene.add(pointLight3)
@@ -71,23 +71,23 @@ scene.add(pointLight3)
     //by adding gui to pointLight2 and set what you want to debug, you'd see it on the top right.
     //you can left click the textfield and drag up or down to control the numbers
     //of you specify the min and max, the textfield will become a slider
-gui.add(pointLight3.position, 'y').min(-3).max(3).step(0.01)
-gui.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
-gui.add(pointLight3.position, 'z').min(-3).max(3).step(0.01)
-gui.add(pointLight3, 'intensity').min(0).max(10).step(0.01)
+// gui.add(pointLight3.position, 'y').min(-3).max(3).step(0.01)
+// gui.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
+// gui.add(pointLight3.position, 'z').min(-3).max(3).step(0.01)
+// gui.add(pointLight3, 'intensity').min(0).max(10).step(0.01)
     // you can group it into folder by 
     // const light3 = gui.addFolder('Light 2')
     // light3.add(pointLight3.position, 'y').min(-3).max(3).step(0.01)
 
     //experiment colors
-const light3Color = {
-    color: 0x0000FF
-}
+// const light3Color = {
+//     color: 0x0000FF
+// }
 
-gui.addColor(light3Color, 'color')
-    .onChange(()=> {
-        pointLight3.color.set(light3Color.color)
-    })
+// gui.addColor(light3Color, 'color')
+//     .onChange(()=> {
+//         pointLight3.color.set(light3Color.color)
+//     })
 
         //pointerLightHelper => the 2nd parameter is the scale of the helper
 // const pointLightHelper = new THREE.PointLightHelper(pointLight3,1)
